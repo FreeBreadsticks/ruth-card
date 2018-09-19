@@ -8,6 +8,10 @@ class NotesController < ApplicationController
     @note = Note.new
   end
 
+  def all_notes
+    @notes = Note.all
+  end
+
   def create
     Note.create(note_params)
     redirect_to root_path
